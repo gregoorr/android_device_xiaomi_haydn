@@ -14,6 +14,41 @@ $(call inherit-product, device/xiaomi/haydn/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# RisingOS stuff
+RISING_CHIPSET := SM8350
+WITH_GMS := false
+TARGET_CORE_GMS := false
+TARGET_CORE_GMS_EXTRAS := false
+TARGET_USE_GOOGLE_TELEPHONY := false
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+
+# Package Type
+RISING_PACKAGE_TYPE := Gapps
+
+# Maintainer flag
+RISING_MAINTAINER := gregoorr
+
+# Quick tap feature
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Face Unlock
+TARGET_SUPPORT_FACE_UNLOCK := true
+
+# Blur
+TARGET_ENABLE_BLUR := true
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# RisingOS!
+BUILD_HOSTNAME := RisingOS
+BUILD_USERNAME := gregoorr
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := false
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := haydn
 PRODUCT_MANUFACTURER := Xiaomi
